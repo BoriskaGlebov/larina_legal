@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: 'Inter';
+    src: url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@theme{
+    --color-navy: #0F172A;
+    --color-gold: #D4AF37;
+    --color-light-gold: #F7E98E;
+    --color-dark-blue: #1E293B;
+    --color-accent-blue: #3B82F6;
+
+    --font-inter: "Inter", sans-serif;
+}
