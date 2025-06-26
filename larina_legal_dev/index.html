@@ -20,8 +20,9 @@
     <div class="container mx-auto p-2">
         <div class="flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <div class="size-15  md:size-20 lg:size-25 px-1  bg-gradient-to-r from-gold to-yellow-500 rounded-lg flex items-center justify-center">
-                    <svg class="size-50 text-red-500" viewBox="0 0 333 213" fill="none"
+                <div id="scrollToTopBtn"
+                     class="size-15  md:size-20 lg:size-25 px-1  bg-gradient-to-r from-gold to-yellow-500 rounded-lg flex items-center justify-center">
+                    <svg class="size-50" viewBox="0 0 333 213" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <path d="M229.2 180.601C229.2 187.8 229.8 193.201 231 196.801C232.2 200.401 234.501 202.8 237.9 204C241.5 205 246.7 205.5 253.5 205.5H275.4C284.8 205.5 292.4 204.5 298.2 202.5C304.2 200.5 308.901 197.4 312.301 193.2C315.901 188.8 318.6 183 320.4 175.801C322.2 168.601 323.601 159.8 324.601 149.4H331.5C330.9 155.6 330.601 163.8 330.601 174C330.601 177.8 330.7 183.3 330.9 190.5C331.3 197.5 331.9 204.8 332.7 212.4C322.5 212 311 211.801 298.2 211.801C285.4 211.601 274 211.5 264 211.5H246.9C240.1 211.5 232.7 211.601 224.7 211.801C216.7 211.801 208.6 211.901 200.4 212.101C192.2 212.101 184.4 212.2 177 212.4V206.4C183.8 206 188.901 205.2 192.301 204C195.9 202.8 198.3 200.4 199.5 196.801C200.7 193.201 201.301 187.8 201.301 180.601V120H229.2V180.601ZM253.5 6C246.7 6.20002 241.5 7.00041 237.9 8.40039C234.5 9.60039 232.2 12.0006 231 15.6006C229.8 19.0006 229.2 24.401 229.2 31.8008V80H201.301V31.8008C201.301 24.4008 200.7 19.0006 199.5 15.6006C198.3 12.0007 195.901 9.60043 192.301 8.40039C188.901 7.00038 183.8 6.2 177 6V0C181.2 0.199994 186.7 0.400592 193.5 0.600586C200.3 0.800583 207.6 0.900391 215.4 0.900391C222.4 0.900391 229.301 0.800583 236.101 0.600586C243.1 0.400596 248.9 0.19999 253.5 0V6Z"
                               fill="white"/>
@@ -61,7 +62,18 @@
                         </svg>
                     </a>
                 </div>
-                <a href="tel:+79005000000" class="text-navy font-semibold hover:text-accent-blue transition-colors">
+                <!-- Маленький экран: только иконка -->
+                <a href="tel:+79005000000"
+                   class="lg:hidden w-12 h-12 bg-gold rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
+                </a>
+
+                <!-- Большой экран: номер телефона -->
+                <a href="tel:+79005000000"
+                   class="hidden lg:inline text-navy font-semibold hover:text-accent-blue transition-colors">
                     +7 (900) 500-00-00
                 </a>
                 <button class="md:hidden" onclick="toggleMobileMenu()">
@@ -100,9 +112,9 @@
              class="w-full h-full object-cover object-center">
     </div>
 
-    <div class="container mx-auto px-4 relative z-10">
+    <div class="container mx-auto px-4 relative z-10 transition-transform duration-500 transform translate-y-30 md:translate-y-0">
         <div class="max-w-2xl">
-            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight ">
                 Защитим ваш <span class="text-gold">цифровой</span> бизнес
             </h1>
             <p class="text-xl text-gray-200 mb-8 leading-relaxed">
@@ -301,9 +313,7 @@
                          class="w-full h-[600px] object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent"></div>
                 </div>
-                <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-gold rounded-full flex items-center justify-center shadow-xl">
-                    <span class="text-navy font-bold text-2xl">10+</span>
-                </div>
+
             </div>
         </div>
     </div>
@@ -876,6 +886,15 @@
         </div>
     </div>
 </div>
+<button id="scrollToTopBtn2"
+        class="hidden fixed bottom-5 right-5 z-50 p-5 rounded-full bg-gold text-black shadow-lg hover:bg-yellow-500 transition">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+         class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 18.75 7.5-7.5 7.5 7.5"/>
+        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 7.5-7.5 7.5 7.5"/>
+    </svg>
+
+</button>
 
 <script>
     // Mobile menu toggle
@@ -1088,6 +1107,28 @@
         }
     });
 </script>
+
+<script>
+    document.getElementById('scrollToTopBtn').addEventListener('click', function () {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+</script>
+<script>
+    const scrollBtn = document.getElementById('scrollToTopBtn2');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 200) {
+            scrollBtn.classList.remove('hidden');
+        } else {
+            scrollBtn.classList.add('hidden');
+        }
+    });
+
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+</script>
+
 
 </body>
 </html>
