@@ -6,12 +6,12 @@
     <title>Larina Legal - Юридическая поддержка цифровых проектов</title>
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
+  <script type="module" crossorigin src="./js/index.js"></script>
   <link rel="stylesheet" crossorigin href="./css/index.css">
 </head>
 <body class="font-inter text-gray-900 bg-white">
@@ -112,11 +112,11 @@
              class="w-full h-full object-cover object-center">
     </div>
 
-    <div class="container mx-auto px-4 relative z-10 transition-transform duration-500 transform translate-y-40 md:translate-y-0">
+    <div class="container mx-auto px-4 relative z-10 transition-transform duration-500 transform translate-y-35 lg:translate-y-0">
         <div class="max-w-2xl">
-            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight ">
+            <h2 class="text-4xl  md:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight ">
                 Защитим ваш <span class="text-gold">цифровой</span> бизнес
-            </h1>
+            </h2>
             <p class="text-xl text-gray-200 mb-8 leading-relaxed">
                 Профессиональная юридическая поддержка IT-проектов. Защита персональных данных, регистрация товарных
                 знаков, IP-аудит.
@@ -468,22 +468,22 @@
                 <!-- Slide 1 -->
                 <div class="swiper-slide bg-white rounded-xl shadow-lg p-6">
                     <img src="./img/letter1.jpg" alt="Благодарственное письмо 1"
-                         class="rounded-lg w-full object-contain h-full mx-auto"/>
+                         class="rounded-lg w-full object-contain h-full mx-auto">
                 </div>
                 <!-- Slide 2 -->
                 <div class="swiper-slide bg-white rounded-xl shadow-lg p-6">
                     <img src="./img/letter1.jpg" alt="Благодарственное письмо 2"
-                         class="rounded-lg w-full object-contain h-full mx-auto"/>
+                         class="rounded-lg w-full object-contain h-full mx-auto">
                 </div>
                 <!-- Slide 3 -->
                 <div class="swiper-slide bg-white rounded-xl shadow-lg p-6">
                     <img src="./img/letter3.jpg" alt="Благодарственное письмо 3"
-                         class="rounded-lg w-full object-contain h-full mx-auto"/>
+                         class="rounded-lg w-full object-contain h-full mx-auto">
                 </div>
                 <!-- Slide 4 -->
                 <div class="swiper-slide bg-white rounded-xl shadow-lg p-6">
                     <img src="./img/letter4.jpg" alt="Благодарственное письмо 4"
-                         class="rounded-lg w-full object-contain h-[50%] mx-auto"/>
+                         class="rounded-lg w-full object-contain h-[50%] mx-auto">
                 </div>
             </div>
 
@@ -1052,82 +1052,7 @@
         modal.classList.add('hidden');
     }
 </script>
-<script>
-    const swiper = new Swiper('.testimonials-swiper', {
-        loop: true,
-        spaceBetween: 30,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        slidesPerView: 1,
-        centeredSlides: true,
-        grabCursor: true,
-    });
-</script>
 
-<!-- скрипт -->
-<script>
-    const form = document.getElementById("contactForm");
-
-    form.addEventListener("submit", async function (e) {
-        e.preventDefault();
-
-        // Простая проверка обязательных полей
-        const name = form.name.value.trim();
-        const email = form.email.value.trim();
-        const message = form.message.value.trim();
-        const privacy = form.privacy.checked;
-
-        if (!name || !email || !message || !privacy) {
-            alert("Пожалуйста, заполните все обязательные поля и подтвердите согласие.");
-            return;
-        }
-
-        // Подготовка данных
-        const formData = new FormData(form);
-
-        try {
-            const response = await fetch("https://formspree.io/f/mnnvobkq", {
-                method: "POST",
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            });
-
-            if (response.ok) {
-                alert("Заявка успешно отправлена!");
-                form.reset();
-            } else {
-                alert("Ошибка при отправке. Попробуйте позже.");
-            }
-        } catch (error) {
-            alert("Ошибка сети. Проверьте соединение.");
-        }
-    });
-</script>
-
-<script>
-    document.getElementById('scrollToTopBtn').addEventListener('click', function () {
-        window.scrollTo({top: 0, behavior: 'smooth'});
-    });
-</script>
-<script>
-    const scrollBtn = document.getElementById('scrollToTopBtn2');
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 200) {
-            scrollBtn.classList.remove('hidden');
-        } else {
-            scrollBtn.classList.add('hidden');
-        }
-    });
-
-    scrollBtn.addEventListener('click', () => {
-        window.scrollTo({top: 0, behavior: 'smooth'});
-    });
-</script>
 
 
 </body>
