@@ -25,14 +25,12 @@ form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     // Получение значений полей
-    const { name, email, message, privacy } = form;
+    const { name_project, message, privacy } = form;
 
     // Простая валидация
     if (
-        !name.value.trim() ||
-        !email.value.trim() ||
-        !message.value.trim() ||
-        !privacy.checked
+        !name_project.value.trim() ||
+        !message.value.trim()
     ) {
         alert('Пожалуйста, заполните все обязательные поля и подтвердите согласие.');
         return;
