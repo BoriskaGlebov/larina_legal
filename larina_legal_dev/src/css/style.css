@@ -32,6 +32,10 @@ h3 {
     @apply text-base text-gray-200 mb-8 leading-relaxed;
 }
 
+#slogan2 {
+    @apply text-base text-gray-200 mb-8 leading-relaxed;
+}
+
 p {
     @apply text-sm md:text-base text-gray-600;
 }
